@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="duan.it.thanh.hotrohoctap">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCVSeKOhs7wHeuDxJlF8nAHoxV20qxQNgU" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Course.CourseActivity"
+            android:label="@string/title_activity_course"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".maps.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".news.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SocialActivity"
+            android:label="@string/title_activity_social"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Course.SignLearnActivity"
+            android:label="@string/title_activity_sign_learn"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Course.ViewLearnActivity"
+            android:label="@string/title_activity_view_learn"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Course.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>

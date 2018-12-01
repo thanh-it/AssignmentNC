@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HOTROHOCTAP</string>
+    <string name="title_activity_course">CourseActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="title_activity_social">SocialActivity</string>
+    <string name="google_maps_API_key">AIzaSyCVSeKOhs7wHeuDxJlF8nAHoxV20qxQNgU</string>
+    <string name="title_activity_sign_learn">SignLearnActivity</string>
+    <string name="title_activity_view_learn">ViewLearnActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>
