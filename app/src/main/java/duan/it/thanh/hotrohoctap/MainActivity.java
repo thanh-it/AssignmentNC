@@ -8,9 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-import duan.it.thanh.hotrohoctap.Course.CourseActivity;
+import duan.it.thanh.hotrohoctap.course.CourseActivity;
 import duan.it.thanh.hotrohoctap.maps.MapsActivity;
 import duan.it.thanh.hotrohoctap.news.NewsActivity;
+import duan.it.thanh.hotrohoctap.social.SocialActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;

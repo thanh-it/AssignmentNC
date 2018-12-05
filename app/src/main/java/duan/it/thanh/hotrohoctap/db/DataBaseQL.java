@@ -28,6 +28,17 @@ public class DataBaseQL extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ACCOUNT);
         db.execSQL(SQL_CREATE_TEST);
+        String sql = "INSERT or replace INTO TEST (DATE, SUBJECT) VALUES('04-03-2018','Lập Trình Mobile - Dự Án 1')," +
+                "('04-03-2018','Lập Trình Web')," +
+                "('05-03-2018','Lập Trình Mobile - Thiết kế giao diện')," +
+                "('05-03-2018','Photoshop cơ bản')," +
+                "('06-03-2018','Photoshop Nâng cao')," +
+                "('06-03-2018','Kỹ năng học tập')," +
+                "('06-03-2018','Kỹ năng làm việc nhóm')," +
+                "('07-03-2018','Lập Trình Web - Dự án 2')," +
+                "('07-03-2018','Lập Trình Web - Dự án 1')," +
+                "('07-03-2018','Email Marketing')";
+        db.execSQL(sql);
     }
 
     @Override

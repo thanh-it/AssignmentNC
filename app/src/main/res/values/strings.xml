@@ -8,4 +8,12 @@
     <string name="title_activity_sign_learn">SignLearnActivity</string>
     <string name="title_activity_view_learn">ViewLearnActivity</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="subject">
+        <item>Lập trình Android</item>
+        <item>Marketing</item>
+        <item>Lập trình web</item>
+        <item>Khách sạn</item>
+    </string>
+    <string name="facebook_app_id">2031062727184202</string> <string name="fb_login_protocol_scheme">fb2031062727184202</string>
+
 </resources>

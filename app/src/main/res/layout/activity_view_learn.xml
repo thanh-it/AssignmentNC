@@ -4,17 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Course.ViewLearnActivity">
+    tools:context=".course.ViewLearnActivity">
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DANH SÁCH SINH VIÊN ĐÃ ĐĂNG KÝ"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/title"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/title"
         android:id="@+id/layout"
         android:orientation="horizontal">
         <TextView

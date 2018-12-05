@@ -1,24 +1,28 @@
-package duan.it.thanh.hotrohoctap.Course;
+package duan.it.thanh.hotrohoctap.course;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import duan.it.thanh.hotrohoctap.DAO.TestDAO;
+import duan.it.thanh.hotrohoctap.MainActivity;
 import duan.it.thanh.hotrohoctap.R;
 import duan.it.thanh.hotrohoctap.model.CheckTest;
-import duan.it.thanh.hotrohoctap.model.SignupLearn;
 
 public class TestActivity extends AppCompatActivity {
     private List<CheckTest> mLearn;
@@ -39,9 +43,23 @@ public class TestActivity extends AppCompatActivity {
         });
         list_test = findViewById(R.id.list_test);
         testDAO = new TestDAO(TestActivity.this);
-        List<CheckTest> students = testDAO.getTestAll();
+        final List<CheckTest> students = testDAO.getTestAll();
         CustomPrs customPrs = new CustomPrs(this,students);
         list_test.setAdapter(customPrs);
+        list_test.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(TestActivity.this);
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat mdformat = new SimpleDateFormat("HH:mm");
+                String strDate = mdformat.format(calendar.getTime());
+                builder.setTitle("Thời gian thi");
+                builder.setMessage("Môn "+students.get(position).getSubjectTest()+" thi vào lúc "+strDate +" ngày "+students.get(position).getDateTest());
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }
+        });
     }
     class CustomPrs extends BaseAdapter
     {
